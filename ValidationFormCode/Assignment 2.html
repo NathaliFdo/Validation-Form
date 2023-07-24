@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Assign 2 Form</title>
+	<link rel="stylesheet" href="./assign2style.css" >
+	<script defer src="assign2script.js"></script>
+</head>
+
+<body>
+	<div class = "layout">
+		<form id="form" name="login" action="/">
+			<h1>Create Account</h1>
+			
+		<div class="form-inputs">
+			<label>First Name:<label>
+			<input type="text" placeholder="first name"id="firstName" name="firstName">
+			<div class="error"></div>
+		</div>
+		
+		<div class="form-inputs ">
+			<label>Last Name:<label>
+			<input type="text" placeholder="last name" id="lastName" name="lastName">
+			<div class="error"></div>
+		</div>
+		
+		<div class="form-inputs">
+			<label>Date of Birth:<label>
+			<input type="date" id="dob" name="dob" onblur="calculate_age()">
+			<div class="error"></div>			
+		</div>
+		
+		<div class="form-inputs">
+			<label>Age (years):<label>
+			<span id="calculated_age"></span>		
+		</div>
+		
+		<div class="form-inputs ">
+			<label>Address:<label>
+			<input type="text" placeholder="No.4/4, Lotus lane, Colombo2" id="address" name="address">
+			<div class="error"></div>
+			
+		</div>
+		
+		<div class="form-inputs">
+			<label>Email:<label>
+			<input type="email" placeholder="jkr4@gmail.com" id="email" name="email">
+			<div class="error"></div>
+			
+		</div>
+		
+		<div class="form-inputs">
+			<label>Username:<label>
+			<input type="text" placeholder="userabc" id="username" name="username" onkeyup="username_Validation()">
+			<div class="error"><span id="username_error"></span></div>
+			
+		</div>
+		
+		<div class="form-inputs">
+			<label>Password:<label>
+			<input type="password" placeholder="password" id="password" name="password" 
+			title="Must contain at least one number and one uppercase and lowercase letter,and at least 8 or more characters">
+			<div class="error"></div>
+			<div id= "message">
+				<p id="letter" class="invalid">Password should contain letters</p>
+				<p id="number" class="invalid">It should have at least one number</b></p>
+				<p id="length" class="invalid">Password length should be between 6 to 15</p>
+			</div>
+		</div>
+		
+		
+		<div class="form-inputs">
+			<label>Confirm Password:<label>
+			<input type="password" placeholder="confirm password" id="confirmPassword" name="password">
+			<div class="error"></div>
+			
+		</div>
+		
+		<div class="check">
+			<input type="checkbox" name="terms" id="myCheck" onclick="myFunction()">I hear by agree all the terms and conditions.
+			
+		</div>
+		
+		<button id="submitBtn" type="submit" disabled>Submit</button>
+	</form>
+</div>
+
+
+</body>
+</html>
